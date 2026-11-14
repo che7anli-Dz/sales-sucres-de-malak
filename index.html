@@ -138,7 +138,6 @@
   .cartbar .go{background:#0A0F0C;color:#E8A317;border-radius:99px;padding:5px 12px;font-size:13px;white-space:nowrap}
   .toast{position:fixed;bottom:168px;left:50%;transform:translateX(-50%) translateY(8px);background:#16261D;color:#F2EFE6;border:1px solid #E8A317;border-radius:99px;padding:9px 18px;font-size:14px;font-weight:700;z-index:120;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
   .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-  .btn-ig-order{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)!important;color:#fff!important}
   .fld{margin-bottom:12px}
   .fld label{display:block;font-size:13.5px;color:#A8B8AC;margin-bottom:5px}
   .fld input,.fld select{width:100%;background:#101B14;border:1px solid #2A3D31;border-radius:10px;color:#F2EFE6;padding:12px;font-size:15px;font-family:inherit}
@@ -193,13 +192,6 @@
   @keyframes pop{0%{transform:scale(.6)}60%{transform:scale(1.15)}100%{transform:scale(1)}}
 
 
-  .copycheck{font-size:46px;text-align:center;margin-top:4px}
-  .copynote{text-align:center;color:#6E5F52;font-size:14.5px;margin-top:8px}
-  .copybox{background:#FBEDE8;border:1px solid #EAD9C8;border-radius:12px;padding:12px;font-size:13.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word;max-height:180px;overflow:auto;text-align:start;margin:14px 0;font-family:inherit;color:#2E2620}
-  #copyOvl.open .sheet{animation:sheetUp .35s ease both}
-  .anim-done #copyOvl.open .sheet{animation:none!important;opacity:1!important;transform:none!important}
-
-
   .medit{position:absolute;top:-8px;inset-inline-end:-8px;width:24px;height:24px;border-radius:50%;background:#E8A317;color:#241A14;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;z-index:2;line-height:1}
   .fld textarea{width:100%;border:1px solid #EAD9C8;border-radius:10px;padding:10px;font:inherit;background:#FFFDF9;color:#2E2620}
   .fld input[type=file]{width:100%;font-size:13px}
@@ -240,7 +232,7 @@
   </div>
 
   <div class="cta">
-    <a class="btn btn-ig-order" id="waBarBtn" href="https://www.instagram.com/sales_et_sucres_de_malak/">📋 <span data-fr="Commander sur Instagram" data-ar="اطلب عبر إنستغرام">Commander sur Instagram</span></a>
+    <a class="btn btn-wa" id="waBarBtn" href="https://wa.me/213561606716?text=Bonjour%20Malak%2C%20je%20souhaite%20commander.">💬 <span data-fr="Commander sur WhatsApp" data-ar="اطلب عبر واتساب">Commander sur WhatsApp</span></a>
     <a class="btn btn-ig" href="https://www.instagram.com/sales_et_sucres_de_malak"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> <span data-fr="Instagram" data-ar="إنستغرام">Instagram</span></a>
   </div>
 
@@ -256,19 +248,9 @@
   <h3 class="popname"><span data-fr="Ma commande" data-ar="طلبي">Ma commande</span></h3>
   <div id="sumLines" style="margin-top:10px"></div>
   <div class="stotal"><span data-fr="Total" data-ar="المجموع">Total</span><span id="sumTotal"></span></div>
-  <p class="snote"><span data-fr="La commande est copiée automatiquement — collez-la dans le message Instagram." data-ar="الطلب يتنسخ أوتوماتيك — الصقو في رسالة إنستغرام.">La commande est copiée automatiquement — collez-la dans le message Instagram.</span></p>
-  <a class="btn-wa2 btn-ig-order" id="waOrderBtn" href="#" target="_blank" rel="noopener">📋 <span data-fr="Commander sur Instagram" data-ar="اطلب عبر إنستغرام">Commander sur Instagram</span></a>
+  <p class="snote"><span data-fr="Sur commande — livraison disponible." data-ar="بالطلب — التوصيل متوفر.">Sur commande — livraison disponible.</span></p>
+  <a class="btn-wa2" id="waOrderBtn" href="#" target="_blank" rel="noopener">💬 <span data-fr="Commander sur WhatsApp" data-ar="اطلب عبر واتساب">Commander sur WhatsApp</span></a>
   <button type="button" class="mreset" id="clearCartBtn"><span data-fr="Vider la commande" data-ar="فرّغ الطلب">Vider la commande</span></button>
-</div></div>
-
-<div class="ovl" id="copyOvl"><div class="sheet">
-  <button type="button" class="x" data-close>×</button>
-  <div class="copycheck">✅</div>
-  <h3 class="popname"><span data-fr="Commande copiée !" data-ar="تم نسخ طلبك!">Commande copiée !</span></h3>
-  <p class="copynote"><span data-fr="Votre commande est copiée — collez-la dans le message Instagram à @sales_et_sucres_de_malak" data-ar="الطلب راه منسوخ — الصقو في رسالة إنستغرام عند @sales_et_sucres_de_malak">Votre commande est copiée — collez-la dans le message Instagram à @sales_et_sucres_de_malak</span></p>
-  <pre class="copybox" id="copyBox"></pre>
-  <a class="btn btn-ig-order" id="copyOpenIg" href="https://www.instagram.com/sales_et_sucres_de_malak/" target="_blank" rel="noopener">📸 <span data-fr="Ouvrir Instagram" data-ar="فتح إنستغرام">Ouvrir Instagram</span></a>
-  <button type="button" class="btn-gold" id="copyAgainBtn" style="margin-top:12px"><span data-fr="Copier à nouveau" data-ar="نسخ مرة أخرى">Copier à nouveau</span></button>
 </div></div>
 
 <div class="ovl" id="addOvl"><div class="sheet">
@@ -366,7 +348,7 @@ var DISHES = [
   {id:"mini-brunch", cat:"box", fr:"Mini brunch", ar:"ميني برنش", price:250, desc:"La pièce"}
 ];
 
-var WA_NUMBER = "213000000000";
+var WA_NUMBER = "213561606716";
 
 function lsGet(k, d){ try{ var v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); }catch(e){ return d; } }
 function lsSet(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
@@ -516,7 +498,7 @@ function refreshDayBadges(){
   for(var i = 0; i < cards.length; i++) updateDayBadge(cards[i].getAttribute("data-box"));
 }
 
-function orderMsg(){
+function waLink(){
   var lines = [];
   var total = 0, hasUnpriced = false;
   for(var k in cart){
@@ -533,31 +515,20 @@ function orderMsg(){
   }
   var head = isAr() ? "سلام Malak، حاب نطلب:" : "Bonjour Malak, je souhaite commander :";
   var tot = (isAr() ? "المجموع: " : "Total : ") + fmt(total) + (isAr() ? " دج" : " DA") + (hasUnpriced ? (isAr() ? " (+ أطباق عند الطلب)" : " (+ plats sur demande)") : "");
-  return head + "\n" + lines.join("\n") + "\n" + tot;
+  var msg = head + "\n" + lines.join("\n") + "\n" + tot;
+  return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
 }
-function fallbackCopy(t){
-  var ta = document.createElement("textarea");
-  ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
-  document.body.appendChild(ta); ta.select();
-  try{ document.execCommand("copy"); }catch(e){}
-  document.body.removeChild(ta);
-}
-function igOrder(){
-  if(cartCount() === 0){ window.open("https://www.instagram.com/sales_et_sucres_de_malak/", "_blank"); return; }
-  var msg = orderMsg();
-  window._lastOrderMsg = msg;
-  function done(){
-    closeOvls();
-    document.getElementById("copyBox").textContent = msg;
-    document.getElementById("copyOvl").classList.add("open");
-  }
-  if(navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(msg).then(done, function(){ fallbackCopy(msg); done(); });
-  } else { fallbackCopy(msg); done(); }
+
+function waGeneric(){
+  return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(isAr() ? "سلام Malak، حاب نطلب:" : "Bonjour Malak, je souhaite commander :");
 }
 function syncWaButtons(){
-  var b1 = document.getElementById("waBarBtn"); if(b1) b1.href = "https://www.instagram.com/sales_et_sucres_de_malak/";
-  var b2 = document.getElementById("waOrderBtn"); if(b2) b2.href = "https://www.instagram.com/sales_et_sucres_de_malak/";
+  var link = cartCount() ? waLink() : waGeneric();
+  var b1 = document.getElementById("waBarBtn"); if(b1) b1.href = link;
+  var b2 = document.getElementById("waOrderBtn"); if(b2) b2.href = link;
+}
+function waOrder(){
+  window.open(waLink(), "_blank");
 }
 
 function openSummary(){
@@ -754,8 +725,8 @@ for(var ci = 0; ci < closers.length; ci++) closers[ci].addEventListener("click",
 var ovls = document.querySelectorAll(".ovl");
 for(var oi = 0; oi < ovls.length; oi++) ovls[oi].addEventListener("click", function(e){ if(e.target === this) closeOvls(); });
 document.getElementById("langBtn").addEventListener("click", function(){ setTimeout(renderAll, 0); });
-document.getElementById("waBarBtn").addEventListener("click", function(e){ if(cartCount()){ e.preventDefault(); igOrder(); } });
-document.getElementById("waOrderBtn").addEventListener("click", function(e){ e.preventDefault(); igOrder(); });
+document.getElementById("waBarBtn").addEventListener("click", function(e){ if(cartCount()){ e.preventDefault(); waOrder(); } });
+document.getElementById("waOrderBtn").addEventListener("click", function(e){ e.preventDefault(); waOrder(); });
 
 /* owner mode: 4 taps on the logo — the code is asked once, then remembered */
 var logoTaps = 0, logoTimer = null;
